@@ -180,35 +180,63 @@ body{
 /*mobile design*/
 
 @media(max-width:450px){
-    body{
-        display: flex;
-       flex-direction: column;
-       max-width: 100%;
-       min-height: 100vh;
-       align-items: start;
+    .body{
+        max-width: 100vw;
+        max-height: 100vh;
     }
     .attribution{
         display: none;
     }
-   .container{
-    display: flex;
-    flex-direction: column;
-    border-radius: 0px;
-    box-shadow: none;
-    /* justify-content:stretch; */
-       margin: 0;
-       width: 100vw;
-       height: 100vh;
-       
-    
-   }
-   .left{
-    max-width: 100%;
-    border-radius: 0 0 3rem 3rem;
-   }
-   .right{
-    width: 100%;
-   }
-
+    .container{
+        display: flex;
+        flex-direction: column;
+            width: 100%;
+            height:100%;
+        /* background-color: red; */
+    }
+    .left{
+        border-top-left-radius: 0rem;
+        border-top-right-radius: 0rem;
+        min-height: 30%;
+         width: 100%;
+    }
+    .left h3{
+        font-size: 2.2rem;
+    }
+    .Score{
+        width: 44vw;
+        height: 44vw;
+        align-self: center;
+        margin-top: 0rem;
+    }
+    #num{
+        font-size:18vw;
+    }
+    #of{
+        font-size: 4.4vw;
+    }
+    .comment{
+        justify-items: center;
+        width: 80%;
+    }
+    .comment h4{
+        margin-top: 2rem;
+        font-size: 8vw;
+    }
+    .comment p{
+        font-size: 4vw;
+    }
 }
-/*sdiado*/
+@media(max-height:668px){
+    .left{
+        min-height: 30vh;
+        grid-template-rows: 0.2fr 1fr 0.7fr;
+    }
+    .Score{
+        width: 15rem;
+        height: 15rem;
+    }
+    #num{
+        font-size: 6rem;
+    }
+}
