@@ -4,7 +4,7 @@ html{
      width: 100%;
 }
 @font-face {
-    font-family: HankenGrotesk;
+    font-family: 'HankenGrotesk';
     src: url('/assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
 }
 *{
@@ -186,8 +186,9 @@ body{
     .container{
         display: flex;
         flex-direction: column;
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
         box-shadow: none;
     }
     .left{
@@ -208,7 +209,7 @@ body{
         font-size: 3rem;
     }
     .comment p{
-        font-size: 1.5rem;
+        font-size: 1.5em;
     }
     .left h3{
         font-size: 2.5rem;
@@ -235,6 +236,9 @@ body{
     .left{
         height: 50%;
     } 
+    .comment p {
+        font-size: 1.4rem;
+    }
 }
 @media ((max-height:660px) and (max-width:330px) ) {
     .left{
