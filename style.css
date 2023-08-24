@@ -1,5 +1,7 @@
 html{
     font-size: 62.5%;
+    height: 100%;
+     width: 100%;
 }
 @font-face {
     font-family: HankenGrotesk;
@@ -7,6 +9,7 @@ html{
 }
 *{
     margin: 0;
+    padding:0;
     box-sizing: border-box;
     font-size: inherit;
     
@@ -16,8 +19,8 @@ body{
     font-weight: 400;
     display: grid;
     place-items: center;
-    min-height: 100vh;
-    max-width: 100vw;
+     height: 100%;
+     width: 100%;
     /* margin:auto; */
 }
 .container{
@@ -179,67 +182,71 @@ body{
 
 /*mobile design*/
 
-@media(max-width:450px){
-    .body{
-        max-width: 100vw;
-        max-height: 100vh;
-    }
-    .attribution{
-        display: none;
-    }
+@media(max-width:500px){
     .container{
         display: flex;
         flex-direction: column;
-            width: 100%;
-            height:100%;
-            border-radius: 0rem;
-            box-shadow: none;
-        /* background-color: red; */
+        width: 100%;
+        height: 100%;
+        box-shadow: none;
     }
     .left{
-        border-top-left-radius: 0rem;
-        border-top-right-radius: 0rem;
-        min-height: 30%;
-         width: 100%;
-         font-size: ;
-    }
-    .left h3{
-        font-size: 2.2rem;
+        width:100%;
+        height: 45%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
     .Score{
-        width: 44vw;
-        height: 44vw;
-        align-self: center;
-        margin-top: 0rem;
-    }
-    #num{
-        font-size:18vw;
-    }
-    #of{
-        font-size: 4.4vw;
+        margin-top: 1rem;
+        width: 16rem;
+        height:16rem;
     }
     .comment{
-        justify-items: center;
-        width: 80%;
+        width: 80% ;
     }
     .comment h4{
-        margin-top: 2rem;
-        font-size: 8vw;
+        font-size: 3rem;
     }
     .comment p{
-        font-size: 4vw;
+        font-size: 1.5rem;
+    }
+    .left h3{
+        font-size: 2.5rem;
+    }
+    
+    .right{
+         margin-right: 1.2rem;
+        width: 100%;
+        height:55%;
+        
+    }
+    .scores{
+       width: 95%;
+       
+    }
+    .score-icon span{
+        font-size: 1.5rem;
+    }
+    .attribution{
+        display:none;
     }
 }
-@media(max-height:668px){
+@media ((max-height:750px) and (max-width:500px) ) {
     .left{
-        min-height: 30vh;
-        grid-template-rows: 0.2fr 1fr 0.7fr;
+        height: 50%;
+    } 
+}
+@media ((max-height:660px) and (max-width:330px) ) {
+    .left{
+        height: 50%;
+    } 
+    .comment{
+        width: 90%;
     }
-    .Score{
-        width: 15rem;
-        height: 15rem;
+    .comment h4{
+        font-size: 2.5rem;
     }
-    #num{
-        font-size: 6rem;
+    .comment p {
+        font-size: 1.4rem;
     }
 }
